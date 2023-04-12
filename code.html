@@ -102,25 +102,31 @@
             <div class="col-12 col-lg-8">
                 <pre class="line-numbers">
                     <code class="language-js">
-function displayMessage() {
-    let msg = document.getElementById("message").value;
-    //alert(msg);
+function reverseString() {
+    let str = document.getElementById("inputstr").value;
 
-    Swal.fire(
-        {
-            backdrop: false,
-            title: 'APP NAME',
-            text: msg
-        }
-    );
+    if (str.length == 0) {
+        return;
+    }
+
+    let rev = "";
+    for (i = str.length - 1; i >= 0; i--) {
+        rev += str[i];
+    }
+
+    Swal.fire({
+        backdrop: false,
+        title: "APP NAME",
+        text: str + " backwards is " + rev,
+    });
 }
                     </code>
                 </pre>
             </div>
             <div class="col-12 col-lg-4">
                 <p>The code is structured in one function</p>
-                <h5>displayMessage</h5>
-                <p>Prints out the message</p>
+                <h5>reverseString</h5>
+                <p>Reverses the text and displays it.</p>
             </div>
         </div>
     </main>
