@@ -1,5 +1,6 @@
 function reverseString() {
-    let str = document.getElementById("inputstr").value;
+    let val = document.getElementById("inputstr").value;
+    str = val.trim();
 
     if (str.length == 0) {
         return;
