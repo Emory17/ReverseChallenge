@@ -11,9 +11,6 @@ function reverseString() {
         rev += str[i];
     }
 
-    Swal.fire({
-        backdrop: false,
-        title: "APP NAME",
-        text: str + " backwards is " + rev,
-    });
+    document.getElementById("msg").textContent = rev;
+    document.getElementById("alert").classList.remove("d-none");
 }
